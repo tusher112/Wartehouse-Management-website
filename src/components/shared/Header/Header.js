@@ -25,6 +25,7 @@ const Header = () => {
                             <Link to="/product">Product</Link>
                             <Link to="/blogs">Blogs</Link>
                             <Link to="/contact">Contact</Link>
+                            <Link to="/manage">Manage Item</Link>
 
                             {
                                 user ? (<Link to="/">Logout</Link>)
