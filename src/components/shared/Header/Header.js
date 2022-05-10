@@ -8,7 +8,7 @@ import './Header.css';
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    const handleSignout = () => {
+    const handleSignout = () => {      
         signOut(auth);
     }
     return (
@@ -22,17 +22,21 @@ const Header = () => {
                         </Nav>
                         <Nav className='nav-link'>
                             <Link to="/">Home</Link>
-                            <Link to="/product">Product</Link>
                             <Link to="/blogs">Blogs</Link>
                             <Link to="/contact">Contact</Link>
-                            <Link to="/manage">Manage Item</Link>
-                            <Link to="/additem">Add Item</Link>
-                            
+           
 
+                           
                             {
-                                user ? (<Link to="/">Logout</Link>)
+                                user ? 
+                                <React.Fragment>
+                                <Link to="/additem">Add Item</Link>
+                                <Link to="/manage">Manage Item</Link>
+                                <Link to="/" onClick={handleSignout} >Logout</Link>
+                                </React.Fragment>
                                     : (<Link to="/login">Login</Link>)
                             }
+                           
 
                         </Nav>
                     </Navbar.Collapse>
