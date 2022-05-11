@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import About from "../About/About";
 import Product from "../Product/Product";
 import Footer from "../shared/Footer/Footer";
 import Banner from "./Banner/Banner";
@@ -30,6 +31,7 @@ const Home = () => {
       <Link to="/manage">
         <button className="btn btn-info mt-5 mb-5">Manage All Product</button>
       </Link>
+      <About></About>
       <Footer></Footer>
     </>
   );

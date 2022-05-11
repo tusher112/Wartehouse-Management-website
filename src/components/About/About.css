@@ -1,0 +1,10 @@
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.about img{
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+}
