@@ -11,6 +11,8 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import AddItems from './components/AddItems/AddItems';
 import RequireAuth from './components/Auth/requireAuth/requireAuth';
 import Blogs from './components/Blogs/Blogs';
+import About from './components/About/About';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}> </Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        <Route path="/*" element={<NotFound></NotFound>}></Route>
         <Route path="/signup" element={<Signup></Signup>}> </Route>
         <Route path="/manage" element={
           <RequireAuth>
